@@ -1,0 +1,7 @@
+name = "memo-relay"
+main = "maimemo-relay.js"
+compatibility_date = "2025-01-01"
+
+# 生产环境请把 ALLOWED_ORIGIN 换成你的 GitHub Pages 域名（含协议，不含末尾斜杠）
+[vars]
+ALLOWED_ORIGIN = "https://yourname.github.io"

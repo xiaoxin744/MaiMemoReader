@@ -1,0 +1,26 @@
+# 仓库根（E:\MaiMemoReader）忽略清单
+node_modules/
+app/node_modules/
+app/dist/
+dist/
+
+# 凭证与导出数据
+.env
+.env.*
+*.pem
+memo-reader-*.json
+*.local
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# 编辑过程中的备份文件
+*.bak
+*.bak2
+*.bak3
+*.orig
+*.rej

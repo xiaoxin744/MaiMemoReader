@@ -1,0 +1,8 @@
+# pnpm 10+ 的配置位置（部分旧版本从 .npmrc 读，故两处都保留）
+# exFAT / FAT32 不支持符号链接，必须用 hoisted 结构，否则安装会报 EISDIR
+nodeLinker: hoisted
+packageImportMethod: copy
+
+# 允许 esbuild 执行安装脚本（pnpm 默认拦截）
+onlyBuiltDependencies:
+  - esbuild
