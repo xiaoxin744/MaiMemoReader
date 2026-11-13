@@ -120,6 +120,11 @@ async function request<T>(
       raw: (payload as RawError).errors?.[0]?.msg,
     });
   }
+  // 墨墨开放 API 的业务数据包在 data 字段里（{ success, errors, data }），在此统一拆包，
+  // 否则上层读 payload.progress / payload.today_items 永远是 undefined。
+  if (payload && typeof payload === "object" && "data" in payload) {
+    return (((payload as { data: unknown }).data ?? payload) as T);
+  }
   return payload as T;
 }
 
