@@ -2,7 +2,7 @@
  * 只缓存应用自身的静态资源；任何带 Authorization 的请求、跨域 API 响应都不进入缓存。
  * 版本号变更后，旧缓存会在 activate 阶段清理。
  */
-const VERSION = 'v1.0.0';
+const VERSION = 'v1.0.1';
 const SHELL_CACHE = `memo-reader-shell-${VERSION}`;
 const ASSET_CACHE = `memo-reader-assets-${VERSION}`;
 const SHELL = ['./', './index.html', './manifest.webmanifest'];
